@@ -3,307 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voluntários da Pátria Joias | Em Breve</title>
-    <meta name="description" content="Voluntários da Pátria Joias - Compramos Ouro e Prata. Nosso novo site está chegando em breve.">
-    <meta property="og:title" content="Voluntários da Pátria Joias | Em Breve">
-    <meta property="og:description" content="Nosso novo site está chegando. Em breve, uma experiência completa para você.">
+    <title>Voluntários da Pátria Joias | Compramos Ouro e Prata</title>
+    <meta name="description" content="Compra de ouro e prata com pagamento imediato. Avaliação gratuita e segura em Santana, São Paulo.">
+
+    <meta property="og:title" content="Voluntários da Pátria Joias | Compramos Ouro e Prata">
+    <meta property="og:description" content="Compra segura de ouro e prata com pagamento instantâneo.">
     <meta property="og:image" content="img/logo.png">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://voluntariosdapatriajoias.com.br">
+
     <link rel="icon" type="image/png" href="img/logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
 
-        body {
-            font-family: 'Montserrat', system-ui, sans-serif;
-            background: #0A0A0A;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Animated background particles */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background:
-                radial-gradient(circle at 20% 50%, rgba(212, 160, 23, 0.06) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.04) 0%, transparent 50%),
-                radial-gradient(circle at 50% 80%, rgba(212, 160, 23, 0.05) 0%, transparent 50%);
-            animation: bgPulse 8s ease-in-out infinite alternate;
-            z-index: 0;
-        }
-
-        @keyframes bgPulse {
-            0% { opacity: 0.5; transform: scale(1); }
-            100% { opacity: 1; transform: scale(1.1); }
-        }
-
-        /* Gold floating particles */
-        .particles {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: #D4A017;
-            border-radius: 50%;
-            opacity: 0;
-            animation: float linear infinite;
-        }
-
-        .particle:nth-child(1) { left: 10%; animation-duration: 12s; animation-delay: 0s; }
-        .particle:nth-child(2) { left: 25%; animation-duration: 15s; animation-delay: 2s; }
-        .particle:nth-child(3) { left: 40%; animation-duration: 11s; animation-delay: 4s; }
-        .particle:nth-child(4) { left: 55%; animation-duration: 14s; animation-delay: 1s; }
-        .particle:nth-child(5) { left: 70%; animation-duration: 13s; animation-delay: 3s; }
-        .particle:nth-child(6) { left: 85%; animation-duration: 16s; animation-delay: 5s; }
-        .particle:nth-child(7) { left: 15%; animation-duration: 10s; animation-delay: 6s; }
-        .particle:nth-child(8) { left: 60%; animation-duration: 17s; animation-delay: 7s; }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) scale(0); opacity: 0; }
-            10% { opacity: 0.6; }
-            90% { opacity: 0.2; }
-            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
-        }
-
-        .container {
-            padding: 40px 24px;
-            max-width: 520px;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Logo with glow */
-        .logo-wrapper {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 48px;
-        }
-
-        .logo-wrapper::before {
-            content: '';
-            position: absolute;
-            inset: -20px;
-            background: radial-gradient(circle, rgba(212, 160, 23, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            animation: logoGlow 4s ease-in-out infinite alternate;
-        }
-
-        @keyframes logoGlow {
-            0% { opacity: 0.5; transform: scale(0.9); }
-            100% { opacity: 1; transform: scale(1.1); }
-        }
-
-        .logo {
-            width: 200px;
-            height: auto;
-            display: block;
-            position: relative;
-            z-index: 1;
-            filter: drop-shadow(0 0 30px rgba(212, 160, 23, 0.2));
-        }
-
-        /* Gold line separator */
-        .gold-line {
-            width: 80px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #D4A017, transparent);
-            margin: 0 auto 32px;
-        }
-
-        /* Title */
-        .title {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 8px;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            background: linear-gradient(90deg, #D4A017, #FFD700, #F5C518, #D4A017);
-            background-size: 300% 100%;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmer 4s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .title-sub {
-            font-size: 0.85rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #666;
-            margin-bottom: 32px;
-            font-weight: 600;
-        }
-
-        .subtitle {
-            font-size: 1rem;
-            color: #888;
-            margin-bottom: 48px;
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        /* Buttons */
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            align-items: center;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 15px 36px;
-            border-radius: 50px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            width: 280px;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-            transform: translateX(-100%);
-            transition: transform 0.6s;
-        }
-
-        .btn:hover::before {
-            transform: translateX(100%);
-        }
-
-        .btn--whatsapp {
-            background: #25D366;
-            color: #fff;
-            border-color: #25D366;
-        }
-
-        .btn--whatsapp:hover {
-            background: #1fb855;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-        }
-
-        .btn--instagram {
-            background: transparent;
-            color: #ccc;
-            border-color: rgba(255, 255, 255, 0.15);
-        }
-
-        .btn--instagram:hover {
-            border-color: #E1306C;
-            color: #E1306C;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(225, 48, 108, 0.15);
-        }
-
-        .btn svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-            flex-shrink: 0;
-        }
-
-        /* Footer */
-        .footer {
-            margin-top: 56px;
-        }
-
-        .footer-line {
-            width: 40px;
-            height: 1px;
-            background: rgba(212, 160, 23, 0.3);
-            margin: 0 auto 16px;
-        }
-
-        .footer-text {
-            font-size: 0.75rem;
-            color: #444;
-            letter-spacing: 1px;
-        }
-
-        /* Responsive */
-        @media (max-width: 420px) {
-            .logo { width: 160px; }
-            .logo-wrapper { margin-bottom: 36px; }
-            .title { font-size: 2.2rem; letter-spacing: 4px; }
-            .title-sub { font-size: 0.75rem; letter-spacing: 3px; }
-            .subtitle { font-size: 0.9rem; margin-bottom: 36px; }
-            .btn { width: 100%; padding: 14px 24px; font-size: 0.9rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
 
-    <div class="container">
-        <div class="logo-wrapper">
-            <img src="img/logo.png" alt="Voluntários da Pátria Joias" class="logo" width="200" height="200">
-        </div>
-
-        <div class="gold-line"></div>
-
-        <h1 class="title">Em Breve</h1>
-        <p class="title-sub">Novo site chegando</p>
-
-        <p class="subtitle">Estamos preparando uma experiência única para você.<br>Enquanto isso, fale conosco.</p>
-
-        <div class="buttons">
-            <a href="https://wa.me/5511949943175?text=Olá, vim pelo site! Gostaria de mais informações." class="btn btn--whatsapp" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                WhatsApp
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="header__logo">
+                <img src="img/logo.png" alt="Voluntários da Pátria Joias" class="header__logo-img" width="50" height="50">
+                <span class="header__logo-text">Voluntários da Pátria Joias</span>
             </a>
-            <a href="https://www.instagram.com/santanajoiascomproouro/" class="btn btn--instagram" target="_blank" rel="noopener">
-                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                Instagram
+            <a href="https://wa.me/5511949943175?text=Olá, vim pelo site! Gostaria de avaliar meu ouro." class="btn btn--primary header__cta" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line"></i> Avaliar meu ouro
             </a>
         </div>
+    </header>
 
-        <div class="footer">
-            <div class="footer-line"></div>
-            <p class="footer-text">&copy; 2025 Voluntários da Pátria Joias</p>
+    <!-- HERO - SPLIT SCREEN -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <div class="section__tag reveal">Compra de Ouro e Prata</div>
+            <h1 class="hero__title reveal">
+                Seu <span class="gold-shimmer">ouro</span> ou <span class="gold-shimmer">prata</span> vale dinheiro na hora aqui.
+            </h1>
+            <p class="hero__subtitle reveal reveal--delay-1">
+                Compra segura, avaliação técnica e pagamento instantâneo. Transforme suas joias em dinheiro hoje mesmo.
+            </p>
+            <div class="hero__ctas reveal reveal--delay-2">
+                <a href="https://wa.me/5511949943175?text=Olá, vim pelo site! Gostaria de fazer uma avaliação gratuita." class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+                    <i class="ri-whatsapp-line"></i> Avaliação Gratuita
+                </a>
+                <a href="#como-funciona" class="btn btn--outline btn--lg">
+                    Como Funciona?
+                </a>
+            </div>
+            <div class="hero__badges reveal reveal--delay-3">
+                <div class="badge"><i class="ri-shield-check-line"></i> 100% Seguro</div>
+                <div class="badge"><i class="ri-money-dollar-circle-line"></i> Pagamento na Hora</div>
+                <div class="badge"><i class="ri-trophy-line"></i> Melhor Preço</div>
+            </div>
         </div>
-    </div>
+        <div class="hero__image">
+            <picture>
+                <source media="(max-width:768px)" srcset="img/hero-bg4.jpg">
+                <img src="img/hero-bg2.jpg" alt="Ouro e joias" width="600" height="800">
+            </picture>
+        </div>
+    </section>
+
+    <!-- O QUE COMPRAMOS - GRID -->
+    <section class="compramos" id="compramos">
+        <div class="container">
+            <div class="compramos__header">
+                <div class="section__tag reveal">O que compramos</div>
+                <h2 class="section__title section__title--center reveal">
+                    Compramos <strong>ouro e prata</strong> em qualquer forma
+                </h2>
+            </div>
+            <div class="compramos__grid">
+                <div class="compramos__card reveal reveal--delay-1">
+                    <div class="compramos__card-icon"><i class="ri-vip-crown-line"></i></div>
+                    <h3 class="compramos__card-title">Joias</h3>
+                    <p class="compramos__card-desc">Anéis, pulseiras, colares, brincos</p>
+                </div>
+                <div class="compramos__card reveal reveal--delay-2">
+                    <div class="compramos__card-icon"><i class="ri-links-line"></i></div>
+                    <h3 class="compramos__card-title">Correntes</h3>
+                    <p class="compramos__card-desc">Correntes, alianças e pingentes</p>
+                </div>
+                <div class="compramos__card reveal reveal--delay-3">
+                    <div class="compramos__card-icon"><i class="ri-hammer-line"></i></div>
+                    <h3 class="compramos__card-title">Fragmentos</h3>
+                    <p class="compramos__card-desc">Peças danificadas ou quebradas</p>
+                </div>
+                <div class="compramos__card reveal reveal--delay-1">
+                    <div class="compramos__card-icon"><i class="ri-coin-line"></i></div>
+                    <h3 class="compramos__card-title">Moedas e Barras</h3>
+                    <p class="compramos__card-desc">Moedas e barras de ouro e prata</p>
+                </div>
+                <div class="compramos__card reveal reveal--delay-2">
+                    <div class="compramos__card-icon"><i class="ri-emotion-happy-line"></i></div>
+                    <h3 class="compramos__card-title">Dentes</h3>
+                    <p class="compramos__card-desc">Dentes de ouro e prata</p>
+                </div>
+                <div class="compramos__card reveal reveal--delay-3">
+                    <div class="compramos__card-icon"><i class="ri-vip-diamond-line"></i></div>
+                    <h3 class="compramos__card-title">Todos os Quilates</h3>
+                    <p class="compramos__card-desc">18k, 14k e outros quilates</p>
+                </div>
+            </div>
+            <div class="compramos__cta reveal">
+                <a href="https://wa.me/5511949943175?text=Olá, vim pelo site! Tenho dúvidas sobre o que vocês compram." class="btn btn--outline" target="_blank" rel="noopener">
+                    <i class="ri-whatsapp-line"></i> Tirar dúvidas no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMO FUNCIONA - TIMELINE -->
+    <section class="passos" id="como-funciona">
+        <div class="container">
+            <div class="passos__header">
+                <div class="section__tag reveal">Como funciona</div>
+                <h2 class="section__title section__title--center reveal">
+                    Três passos para <strong>vender seu ouro</strong>
+                </h2>
+            </div>
+            <div class="passos__timeline">
+                <div class="passo reveal reveal--delay-1">
+                    <div class="passo__number">01</div>
+                    <div class="passo__img-wrapper">
+                        <img src="img/passo-1-2.jpg" alt="Avaliação" class="passo__img" width="400" height="300" loading="lazy">
+                    </div>
+                    <h3 class="passo__title">Traga seu ouro</h3>
+                    <p class="passo__desc">Nossos especialistas avaliam sua peça de forma técnica e transparente.</p>
+                </div>
+                <div class="passo reveal reveal--delay-2">
+                    <div class="passo__number">02</div>
+                    <div class="passo__img-wrapper">
+                        <img src="img/passo-2-2.jpg" alt="Proposta" class="passo__img" width="400" height="300" loading="lazy">
+                    </div>
+                    <h3 class="passo__title">Receba a proposta</h3>
+                    <p class="passo__desc">Oferta justa baseada na cotação do dia, sem surpresas.</p>
+                </div>
+                <div class="passo reveal reveal--delay-3">
+                    <div class="passo__number">03</div>
+                    <div class="passo__img-wrapper">
+                        <img src="img/passo-3-2.jpg" alt="Pagamento" class="passo__img" width="400" height="300" loading="lazy">
+                    </div>
+                    <h3 class="passo__title">Receba na hora</h3>
+                    <p class="passo__desc">Pagamento imediato via PIX ou dinheiro em espécie.</p>
+                </div>
+            </div>
+            <div class="passos__cta reveal">
+                <a href="https://wa.me/5511949943175?text=Olá, vim pelo site! Quero vender meu ouro." class="btn btn--primary btn--lg" target="_blank" rel="noopener">
+                    <i class="ri-whatsapp-line"></i> Quero vender meu ouro
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFÍCIOS - GLASSMORPHISM -->
+    <section class="beneficios" id="beneficios">
+        <div class="container">
+            <div class="beneficios__header">
+                <div class="section__tag reveal">Por que nos escolher</div>
+                <h2 class="section__title section__title--center reveal">
+                    Confiança que você <strong>sente na prática</strong>
+                </h2>
+            </div>
+            <div class="beneficios__grid">
+                <div class="beneficio reveal reveal--delay-1">
+                    <div class="beneficio__icon"><i class="ri-shield-check-line"></i></div>
+                    <h3 class="beneficio__title">Segurança Total</h3>
+                    <p class="beneficio__desc">Ambiente seguro e equipe especializada para sua tranquilidade.</p>
+                </div>
+                <div class="beneficio reveal reveal--delay-2">
+                    <div class="beneficio__icon"><i class="ri-scales-3-line"></i></div>
+                    <h3 class="beneficio__title">Avaliação Justa</h3>
+                    <p class="beneficio__desc">Cotação oficial do mercado, sem margem escondida.</p>
+                </div>
+                <div class="beneficio reveal reveal--delay-3">
+                    <div class="beneficio__icon"><i class="ri-money-dollar-circle-line"></i></div>
+                    <h3 class="beneficio__title">Pagamento Instantâneo</h3>
+                    <p class="beneficio__desc">PIX ou dinheiro na hora, zero burocracia.</p>
+                </div>
+                <div class="beneficio reveal reveal--delay-4">
+                    <div class="beneficio__icon"><i class="ri-heart-pulse-line"></i></div>
+                    <h3 class="beneficio__title">Sem Compromisso</h3>
+                    <p class="beneficio__desc">Avaliação gratuita, sem pressão para aceitar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section class="localizacao" id="localizacao">
+        <div class="container localizacao__container">
+            <div class="localizacao__map reveal">
+                <iframe
+                    src="about:blank"
+                    data-src="https://maps.google.com/maps?q=R.+Voluntários+da+Pátria+1813+Santana+São+Paulo+SP&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    width="100%" height="100%"
+                    style="border:0; border-radius: 16px;"
+                    allowfullscreen="" loading="lazy"
+                    title="Localização Voluntários da Pátria Joias">
+                </iframe>
+            </div>
+            <div class="localizacao__info reveal">
+                <div class="section__tag">Onde estamos</div>
+                <h2 class="section__title">Visite nossa <strong>loja</strong></h2>
+                <address class="localizacao__address">
+                    <p><i class="ri-map-pin-line"></i> R. Voluntários da Pátria, 1813, 1º andar, Sala 02</p>
+                    <p>Santana, São Paulo/SP</p>
+                    <p>CEP 02011-400</p>
+                </address>
+                <div class="localizacao__contact">
+                    <p><i class="ri-phone-line"></i> (11) 94994-3175</p>
+                </div>
+                <a href="https://www.google.com/maps/search/R.+Voluntários+da+Pátria+1813+Santana+São+Paulo+SP" class="btn btn--outline" target="_blank" rel="noopener">
+                    <i class="ri-map-2-line"></i> Ver no Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final">
+        <div class="container">
+            <h2 class="cta-final__title reveal">Não deixe seu ouro parado. <strong>Transforme em dinheiro.</strong></h2>
+            <p class="cta-final__subtitle reveal reveal--delay-1">Fale agora pelo WhatsApp e agende sua avaliação gratuita.</p>
+            <a href="https://wa.me/5511949943175?text=Olá, vim pelo site! Gostaria de agendar uma avaliação." class="btn btn--dark btn--lg reveal reveal--delay-2" target="_blank" rel="noopener">
+                <i class="ri-whatsapp-line"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <img src="img/logo.png" alt="Voluntários da Pátria Joias" class="footer__logo" width="40" height="40" loading="lazy">
+                <span class="footer__name">Voluntários da Pátria Joias</span>
+            </div>
+            <div class="footer__info">
+                <p><i class="ri-map-pin-line"></i> R. Voluntários da Pátria, 1813, 1º andar, Sala 02, Santana, São Paulo/SP</p>
+            </div>
+            <div class="footer__contact">
+                <a href="https://wa.me/5511949943175" target="_blank" rel="noopener">
+                    <i class="ri-whatsapp-line"></i> (11) 94994-3175
+                </a>
+                <a href="https://www.instagram.com/santanajoiascomproouro/" target="_blank" rel="noopener">
+                    <i class="ri-instagram-line"></i> @santanajoiascomproouro
+                </a>
+            </div>
+            <div class="footer__copy">
+                <p>&copy; 2025 Voluntários da Pátria Joias. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5511949943175?text=Olá, vim pelo site!" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>
